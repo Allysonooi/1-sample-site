@@ -1,0 +1,2 @@
+module StatucHelper
+end
