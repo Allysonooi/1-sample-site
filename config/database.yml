@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: eps_production
-  username: eps
-  password: <%= ENV['EPS_DATABASE_PASSWORD'] %>
+  database: <%= ENV['PSQL_DATABASE_NAME'] %>
+  username: <%= ENV['PSQL_DATABASE_USERNAME'] %>
+  password: <%= ENV['PSQL_DATABASE_PASSWORD'] %>
+  port: <%= ENV['PSQL_DATABASE_PORT'] %>
+  host: <%= ENV['PSQL_DATABASE_HOST'] %>
