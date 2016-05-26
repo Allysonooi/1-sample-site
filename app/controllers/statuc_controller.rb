@@ -1,2 +1,0 @@
-class StatucController < ApplicationController
-end
