@@ -13,3 +13,12 @@
  */
 
 @import 'bootstrap-custom';
+
+.btn-flat {
+  background: #41c4ab;
+  color: white;
+  border-radius: 0 !important;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
