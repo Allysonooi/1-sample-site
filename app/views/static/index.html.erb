@@ -103,13 +103,16 @@
             <h4 style="font-weight:bold;">2. Enter to win!</h4>
             <form>
               <input id="input_email" type="email" class="form-control" placeholder="Enter your email address">
-              <a id="submit_btn" href="javascript:void(0)" class="btn btn-default btn-block btn-flat">Enter Now</a>
+              <a id="submit_btn" href="javascript:void(0)" class="btn btn-default btn-block btn-flat" >Enter Now</a>
               <aa/>
             </form>
             <div style="text-align:center; color:#9c9c9c; font-size:12px; padding-top:20px; line-height:5px;">
               <p>By clicking on 'Enter Now', you accept the</p>
               <a href="#terms-content" id="terms-conditions" onclick="return false">Terms & Conditions</a>
             </div>
+          </div>
+          <div hidden id="eps2" style="background:white; margin-left: 15px; margin-top:15px; margin-right:5px;">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEatPlaySurf.asia%2Fposts%2F10153572449555823%3A0&width=340&show_text=true&height=615&appId" width="340" height="615" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </div>
         </div>
       </div>
@@ -122,6 +125,13 @@
         '<%= asset_url('bg2.jpg')%>',
         '<%= asset_url('bg3.jpg')%>'
       ], {duration: 3000, fade: 1800});
+
+      jQuery(function(){
+         jQuery('#submit_btn').click(function(){
+               jQuery('#eps1').hide();
+               jQuery('#eps2').show();
+        });
+      });
 
 
       var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
