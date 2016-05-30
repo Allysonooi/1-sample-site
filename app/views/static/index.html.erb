@@ -116,7 +116,12 @@
     </div>
     <script>
       // To attach Backstrech as the body's background
-      $.backstretch(['<%= asset_url('bg.jpg')%>'])
+      $.backstretch([
+        '<%= asset_url('bg.jpg')%>',
+        '<%= asset_url('bg1.jpg')%>',
+        '<%= asset_url('bg2.jpg')%>',
+        '<%= asset_url('bg3.jpg')%>'
+      ], {duration: 3000, fade: 1800});
 
 
       var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
