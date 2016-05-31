@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require backstretch
+//= require modernizr.custom.86080
 //= require turbolinks
 //= require_tree .
