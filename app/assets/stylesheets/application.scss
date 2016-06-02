@@ -22,11 +22,18 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-.checkbox {
+.inner-box {
+  padding-left:25px;
+  padding-right:25px;
+}
+.chkbox-label {
   color:#909090;
   font-size:13px;
   opacity: 0.8;
+  font-weight: lighter;
+  padding-right: 25px;
+  padding-left: 30px;
+  margin-top:-20px;
 }
 
 .cb-slideshow,

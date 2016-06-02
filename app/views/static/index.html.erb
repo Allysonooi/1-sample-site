@@ -90,24 +90,20 @@
 
     <div class="col-md-4" style="padding-top:130px; font-family:Proxima Nova;">
       <div id="eps1" style="background:white; margin-top:15px;  padding-bottom:20px; padding-top:15px;">
-        <div style="padding-left:25px; padding-right:25px;">
+        <div class="inner-box">
           <h4 style="font-weight:bold;">1. Like our Page</h4>
           <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FEatPlaySurf.asia%2F&width=300&layout=standard&action=like&show_faces=true&share=false&height=80&appId" width="300" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           <h4 style="font-weight:bold;">2. Enter to win!</h4>
         </div>
         <form>
-          <div style="padding-left:25px; padding-right:25px;">
+          <div class="inner-box">
             <input id="input_email" type="email" class="form-control" placeholder="Enter A Valid Email Address To Receive Coupon" style="font-size:13px">
           </div>
           <hr width="100%" align="center">
-          <div style="padding-left:25px; padding-right:25px;">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" class="checkbox style-2 pull-right"> I accept and allow my email to be used to be contacted regarding the promotional materials of this campaign.
-              </label>
-            </div>
-            <a id="submit_btn" href="javascript:void(0)" class="btn btn-default btn-block btn-flat" >Enter Now</a>
-            <aa/>
+          <div class="inner-box" style="margin-top:-5px;">
+            <input type="checkbox" name="checkbox" id="checkbox" value="checked"/>
+            <label for="checkbox" class="chkbox-label">I accept and allow my email to be used to be contacted regarding the promotional materials of this campaign.</label>
+            <a id="submit_btn" href="javascript:void(0)" class="btn btn-default btn-block btn-flat"  >Enter Now</a>
           </div>
         </form>
         <div style="text-align:center; color:#9c9c9c; font-size:12px; padding-top:22px; line-height:5px;">
@@ -126,9 +122,15 @@
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   var url1 = "<%= url_for(controller: 'static', action: 'ajax_submit_email') %>";
   $(document).on('click', '#submit_btn', function() {
+
     if(!$("#input_email").val().match(re)) {
       alert('Please enter a valid Email');
+      return false
     }
+    if(!$("#checkbox").is(':checked')){
+      alert('You must agree to the terms first.');
+      return false
+      }
     else{
       $.ajax({
         type: "POST",
