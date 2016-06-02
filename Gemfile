@@ -48,3 +48,5 @@ end
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'devise'
