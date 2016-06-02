@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eps</title>
+    <%= stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <ul class="cb-slideshow">
+      <li><span>bg</span></li>
+      <li><span>bg1</span></li>
+      <li><span>bg2</span></li>
+      <li><span>bg3</span></li>
+      <li><span>bg</span></li>
+      <li><span>bg1</span></li>
+      <li><span>bg2</span></li>
+      <li><span>bg3</span></li>
+    </ul>
+  <%= yield %>
+
+  </body>
+</html>
