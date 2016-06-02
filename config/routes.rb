@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static#index'
-
+  get 'admin/home'
   post 'static/ajax_submit_email'
 
   # Example of regular route:
