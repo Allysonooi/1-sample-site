@@ -14,6 +14,28 @@
 
 @import 'bootstrap-custom';
 
+.col-md-3 {
+  background: rgba(0, 0, 0, 0.6);
+  text-align:center;
+  padding-top:13px;
+  padding-bottom:5px;
+  color:white;
+}
+
+.description {
+  text-align:center;
+  font-family:Proxima Nova;
+  color:white;
+  margin-left:58px;
+  margin-right:58px;
+}
+
+.description em {
+  color: #03AB97;
+  font-style: normal;
+  font-weight: bold;
+}
+
 .btn-flat {
   background: #41c4ab;
   color: white;
