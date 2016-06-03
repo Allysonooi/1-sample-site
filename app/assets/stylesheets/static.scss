@@ -43,16 +43,15 @@
 }
 
 .row {
-    margin:0;
+  margin:0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
-  flex-wrap: wrap;
-}
-.row > [class*='col-xs-4'] {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap !important;
+}
+.col-xs-4
+  display: flex;
 }
 
 
