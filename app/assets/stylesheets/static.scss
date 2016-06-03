@@ -33,6 +33,9 @@
   url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.ttf") format("truetype"),
   url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.svg#Lavanderia") format("svg");
 }
+.row {
+    margin:0;
+}
 
 h1 {
   font-family: "Lavanderia" !important;
@@ -48,76 +51,10 @@ p {
   padding-right: 0px !important;
 }
 
-.center {
-  margin:auto;
-  width:80%;
-}
-
-/**
- *  Bootstrap pull 3.x-1.1.1 for Twitter Bootstrap v3.
- *
- *  To have pull-right and pull-left to Bootstrap v3 for xs, sm, md, lg media.
- *  This will help having some complex behavior for contents.
- *  https://github.com/Natshah/bootstrap-pull
- *
- */
-
-
-@media (max-width: 767px) {
-  /** Pull left xs **/
-  .pull-left-xs {
-    float: left;
-  }
-
-  /** Pull right xs **/
-  .pull-right-xs {
-    float: right;
-  }
-}
-
-@media (min-width: 768px) {
-  /** Pull left sm **/
-  .pull-left-sm {
-    float: left;
-  }
-
-  /** Pull right sm **/
-  .pull-right-sm {
-    float: right;
-  }
-}
-
-@media (min-width: 992px) {
-  /** Pull left **/
-  .pull-left-md {
-    float: left;
-  }
-
-  /** Pull right **/
-  .pull-right-md {
-    float: right;
-  }
-}
-
-@media (min-width: 1200px) {
-  /** Pull left **/
-  .pull-left-lg {
-    float: left;
-  }
-
-  /** Pull right **/
-  .pull-right-lg {
-    float: right;
-  }
-}
-
-.col-xs-12 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
 .custom  {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  margin:0 auto;
 }
 .col-xs-3 {
   background: rgba(0, 0, 0, 0.6);
@@ -130,8 +67,8 @@ p {
 .description {
   text-align:center;
   color:white;
-  margin-left:58px;
-  margin-right:58px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .description em {
