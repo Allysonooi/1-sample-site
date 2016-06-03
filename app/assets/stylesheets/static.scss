@@ -3,7 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap-custom';
 
-.col-md-3 {
+.container-fluid {
+  padding-right: 0px !important;
+}
+
+.center {
+  margin:auto;
+  width:80%;
+}
+
+.custom  {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.col-xs-3 {
   background: rgba(0, 0, 0, 0.6);
   text-align:center;
   padding-top:13px;
