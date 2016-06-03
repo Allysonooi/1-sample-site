@@ -3,6 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap-custom';
 
+@import url(http://db.onlinewebfonts.com/c/895ff6ff137584b40827e283a89f1aa1?family=Lavanderia);
+
+@font-face {
+ font-family: "Proxima Nova";
+ src: local("Proxima Nova");
+ src: url("../fonts/proxima-nova-regular.otf");
+ font-size: 12px;
+}
+
+@font-face {font-family: "Lavanderia";
+    src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot");
+    src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.svg#Lavanderia") format("svg");
+}
+
+h1 {
+  font-family: "Lavanderia";
+}
 .container-fluid {
   padding-right: 0px !important;
 }
@@ -12,6 +33,11 @@
   width:80%;
 }
 
+
+.col-xs-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .custom  {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -26,7 +52,6 @@
 
 .description {
   text-align:center;
-  font-family:Proxima Nova;
   color:white;
   margin-left:58px;
   margin-right:58px;
@@ -54,7 +79,7 @@
   color:#909090;
   font-size:13px;
   opacity: 0.8;
-  font-weight: lighter;
+  font-weight: 200;
   padding-right: 25px;
   padding-left: 30px;
   margin-top:-20px;
