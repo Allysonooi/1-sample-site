@@ -22,7 +22,11 @@
 }
 
 h1 {
-  font-family: "Lavanderia";
+  font-family: "Lavanderia" !important;
+}
+
+p {
+  font-family: "Proxima Nova" !important;
 }
 .container-fluid {
   padding-right: 0px !important;
