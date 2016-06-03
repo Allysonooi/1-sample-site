@@ -4,37 +4,40 @@
 @import 'bootstrap-custom';
 
 @font-face {
-  font-family: 'ProximaNova-Regular';
-  src: url('ProximaNova-Regular.eot');
-  src: url('ProximaNova-Regular.woff2') format('woff2'),
-       url('ProximaNova-Regular.woff') format('woff'),
-       url('ProximaNova-Regular.ttf') format('truetype'),
-       url('ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'),
-       url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+  font-family: "ProximaNova-Regular";
+  src: local("ProximaNova-Regular");
+  src: asset_url("ProximaNova-Regular.eot");
+  src: asset_url("ProximaNova-Regular.woff2") format("woff2"),
+       asset_url("ProximaNova-Regular.woff") format("woff"),
+       asset_url("ProximaNova-Regular.ttf") format("truetype"),
+       asset_url("ProximaNova-Regular.svg#ProximaNova-Regular") format("svg"),
+       asset_url("ProximaNova-Regular.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ProximaNova-Semibold';
-  src: url('ProximaNova-Semibold.eot');
-  src: url('ProximaNova-Semibold.woff2') format('woff2'),
-       url('ProximaNova-Semibold.woff') format('woff'),
-       url('ProximaNova-Semibold.ttf') format('truetype'),
-       url('ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'),
-       url('ProximaNova-Semibold.eot?#iefix') format('embedded-opentype');
+  font-family: "ProximaNova-Semibold";
+  src: local("ProximaNova-Semibold");
+  src: asset_url("ProximaNova-Semibold.eot");
+  src: asset_url("ProximaNova-Semibold.woff2") format("woff2"),
+       asset_url("ProximaNova-Semibold.woff") format("woff"),
+       asset_url("ProximaNova-Semibold.ttf") format("truetype"),
+       asset_url("ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg"),
+       asset_url("ProximaNova-Semibold.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lavanderia-Regular';
-  src: url('Lavanderia-Regular.eot');
-  src: url('Lavanderia-Regular.woff2') format('woff2'),
-       url('Lavanderia-Regular.woff') format('woff'),
-       url('Lavanderia-Regular.ttf') format('truetype'),
-       url('Lavanderia-Regular.svg#Lavanderia-Regular') format('svg'),
-       url('Lavanderia-Regular.eot?#iefix') format('embedded-opentype');
+  font-family: "Lavanderia-Regular";
+  src: local("Lavanderia-Regular");
+  src: asset_url("Lavanderia-Regular.eot");
+  src: asset_url("Lavanderia-Regular.woff2") format("woff2"),
+       asset_url("Lavanderia-Regular.woff") format("woff"),
+       asset_url("Lavanderia-Regular.ttf") format("truetype"),
+       asset_url("Lavanderia-Regular.svg#Lavanderia-Regular") format("svg"),
+       asset_url("Lavanderia-Regular.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -63,20 +66,6 @@ p {
   margin:0 auto;
 }
 
-.col-md-3 {
-  background: rgba(0, 0, 0, 0.6);
-  text-align:center;
-  padding-top:13px;
-  padding-bottom:5px;
-  color:white;
-}
-
-.col-xs-8 {
-  background: rgba(255, 255, 255, 0.4);
-  padding-top:13px;
-  padding-bottom:5px;
-  color:black;
-}
 
 .description {
   text-align:center;
