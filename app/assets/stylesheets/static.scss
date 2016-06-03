@@ -3,49 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap-custom';
 
-@import url(http://db.onlinewebfonts.com/c/bf9f5d50c1b928ff21436517a1a95ad9?family=Proxima+Nova);
-@import url(http://db.onlinewebfonts.com/c/f14eee643541cf03a10f26c944cc29f5?family=Proxima+Nova);
-@import url(http://db.onlinewebfonts.com/c/895ff6ff137584b40827e283a89f1aa1?family=Lavanderia);
-
-@font-face {font-family: "Proxima Nova";
-  src: url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.eot");
-  src: url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.eot?#iefix") format("embedded-opentype"),
-  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.woff2") format("woff2"),
-  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.woff") format("woff"),
-  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.ttf") format("truetype"),
-  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.svg#Proxima Nova") format("svg");
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('ProximaNova-Regular.eot');
+  src: url('ProximaNova-Regular.woff2') format('woff2'),
+       url('ProximaNova-Regular.woff') format('woff'),
+       url('ProximaNova-Regular.ttf') format('truetype'),
+       url('ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'),
+       url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face {font-family: "Proxima Nova SB";
-    src: url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.eot");
-    src: url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.eot?#iefix") format("embedded-opentype"),
-    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.woff2") format("woff2"),
-    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.woff") format("woff"),
-    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.ttf") format("truetype"),
-    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.svg#Proxima Nova") format("svg");
+@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url('ProximaNova-Semibold.eot');
+  src: url('ProximaNova-Semibold.woff2') format('woff2'),
+       url('ProximaNova-Semibold.woff') format('woff'),
+       url('ProximaNova-Semibold.ttf') format('truetype'),
+       url('ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'),
+       url('ProximaNova-Semibold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face {font-family: "Lavanderia";
-  src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot");
-  src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot?#iefix") format("embedded-opentype"),
-  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff2") format("woff2"),
-  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff") format("woff"),
-  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.ttf") format("truetype"),
-  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.svg#Lavanderia") format("svg");
+@font-face {
+  font-family: 'Lavanderia-Regular';
+  src: url('Lavanderia-Regular.eot');
+  src: url('Lavanderia-Regular.woff2') format('woff2'),
+       url('Lavanderia-Regular.woff') format('woff'),
+       url('Lavanderia-Regular.ttf') format('truetype'),
+       url('Lavanderia-Regular.svg#Lavanderia-Regular') format('svg'),
+       url('Lavanderia-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 .row {
     margin:0;
 }
 
 h1 {
-  font-family: "Lavanderia" !important;
+  font-family: "Lavanderia-Regular" !important;
 }
 
 h4 {
-  font-family: "Proxima Nova SB" !important;
+  font-family: "ProximaNova-Semibold" !important;
 }
 p {
-  font-family: "Proxima Nova" !important;
+  font-family: "ProximaNova-Regular" !important;
 }
 .container-fluid {
   padding-right: 0px !important;
@@ -56,12 +62,20 @@ p {
   padding-right: 0 !important;
   margin:0 auto;
 }
-.col-xs-3 {
+
+.col-md-3 {
   background: rgba(0, 0, 0, 0.6);
   text-align:center;
   padding-top:13px;
   padding-bottom:5px;
   color:white;
+}
+
+.col-xs-8 {
+  background: rgba(255, 255, 255, 0.4);
+  padding-top:13px;
+  padding-bottom:5px;
+  color:black;
 }
 
 .description {
@@ -74,7 +88,7 @@ p {
 .description em {
   color: #03AB97;
   font-style: normal;
-  font-family: "Proxima Nova SB" !important;
+  font-family: "ProximaNova-Semibold" !important;
 }
 
 .btn-flat {
