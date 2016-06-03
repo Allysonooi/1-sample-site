@@ -3,28 +3,44 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap-custom';
 
+@import url(http://db.onlinewebfonts.com/c/bf9f5d50c1b928ff21436517a1a95ad9?family=Proxima+Nova);
+@import url(http://db.onlinewebfonts.com/c/f14eee643541cf03a10f26c944cc29f5?family=Proxima+Nova);
 @import url(http://db.onlinewebfonts.com/c/895ff6ff137584b40827e283a89f1aa1?family=Lavanderia);
 
-@font-face {
- font-family: "Proxima Nova";
- src: local("Proxima Nova");
- src: url("../fonts/proxima-nova-regular.otf");
- font-size: 12px;
+@font-face {font-family: "Proxima Nova";
+  src: url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.eot");
+  src: url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.eot?#iefix") format("embedded-opentype"),
+  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.woff2") format("woff2"),
+  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.woff") format("woff"),
+  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.ttf") format("truetype"),
+  url("http://db.onlinewebfonts.com/t/bf9f5d50c1b928ff21436517a1a95ad9.svg#Proxima Nova") format("svg");
+}
+
+@font-face {font-family: "Proxima Nova SB";
+    src: url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.eot");
+    src: url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/f14eee643541cf03a10f26c944cc29f5.svg#Proxima Nova") format("svg");
 }
 
 @font-face {font-family: "Lavanderia";
-    src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot");
-    src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot?#iefix") format("embedded-opentype"),
-    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff2") format("woff2"),
-    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff") format("woff"),
-    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.ttf") format("truetype"),
-    url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.svg#Lavanderia") format("svg");
+  src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot");
+  src: url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.eot?#iefix") format("embedded-opentype"),
+  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff2") format("woff2"),
+  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.woff") format("woff"),
+  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.ttf") format("truetype"),
+  url("http://db.onlinewebfonts.com/t/895ff6ff137584b40827e283a89f1aa1.svg#Lavanderia") format("svg");
 }
 
 h1 {
   font-family: "Lavanderia" !important;
 }
 
+h4 {
+  font-family: "Proxima Nova SB" !important;
+}
 p {
   font-family: "Proxima Nova" !important;
 }
@@ -37,6 +53,63 @@ p {
   width:80%;
 }
 
+/**
+ *  Bootstrap pull 3.x-1.1.1 for Twitter Bootstrap v3.
+ *
+ *  To have pull-right and pull-left to Bootstrap v3 for xs, sm, md, lg media.
+ *  This will help having some complex behavior for contents.
+ *  https://github.com/Natshah/bootstrap-pull
+ *
+ */
+
+
+@media (max-width: 767px) {
+  /** Pull left xs **/
+  .pull-left-xs {
+    float: left;
+  }
+
+  /** Pull right xs **/
+  .pull-right-xs {
+    float: right;
+  }
+}
+
+@media (min-width: 768px) {
+  /** Pull left sm **/
+  .pull-left-sm {
+    float: left;
+  }
+
+  /** Pull right sm **/
+  .pull-right-sm {
+    float: right;
+  }
+}
+
+@media (min-width: 992px) {
+  /** Pull left **/
+  .pull-left-md {
+    float: left;
+  }
+
+  /** Pull right **/
+  .pull-right-md {
+    float: right;
+  }
+}
+
+@media (min-width: 1200px) {
+  /** Pull left **/
+  .pull-left-lg {
+    float: left;
+  }
+
+  /** Pull right **/
+  .pull-right-lg {
+    float: right;
+  }
+}
 
 .col-xs-12 {
   padding-left: 0 !important;
@@ -64,7 +137,7 @@ p {
 .description em {
   color: #03AB97;
   font-style: normal;
-  font-weight: bold;
+  font-family: "Proxima Nova SB" !important;
 }
 
 .btn-flat {
