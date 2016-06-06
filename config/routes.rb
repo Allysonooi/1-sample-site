@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'static#index'
   get 'admin/home'
   post 'static/ajax_submit_email'
+  get 'terms/terms-content'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
