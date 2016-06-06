@@ -46,6 +46,13 @@
   margin:0;
 }
 
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 h1 {
   font-family: "Lavanderia-Regular" !important;
 }
