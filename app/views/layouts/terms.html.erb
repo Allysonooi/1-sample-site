@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="">
   <head>
-    <title>Eps-T&C</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EatPlaySurf - Prom T&C</title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lets do something awesome">
+    <link rel="icon" sizes="16x16" href="images/favicon-16x16">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Eat Play Surf">
+    <link rel="apple-icon" href="images/touch/apple-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#03AB97">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#03AB97">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!-- <link rel="canonical" href="http://www.example.com/"> -->
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   </head>
+  <body>
 
   <%= yield %>
 
   </body>
+
+  <footer id="footer">
+      <div class="container">© Copyrights 2016. All Rights Reserved by EatPlaySurf</div>
+  </footer>
 </html>
