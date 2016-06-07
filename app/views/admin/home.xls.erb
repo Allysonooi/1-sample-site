@@ -4,18 +4,65 @@
   xmlns:x="urn:schemas-microsoft-com:office:excel"
   xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
   xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Styles>
+   <Style ss:ID="s62">
+     <NumberFormat ss:Format="Short Date"/>
+   </Style>
+  </Styles>
   <Worksheet ss:Name="Sheet1">
     <Table>
       <Row>
-        <Cell><Data ss:Type="String">Id</Data></Cell>
-        <Cell><Data ss:Type="String">Email</Data></Cell>
-        <Cell><Data ss:Type="String">Coupon code</Data></Cell>
+       <Cell><Data ss:Type="String">post_title</Data></Cell>
+       <Cell><Data ss:Type="String">post_excerpt</Data></Cell>
+       <Cell><Data ss:Type="String">post_status</Data></Cell>
+       <Cell><Data ss:Type="String">post_parent</Data></Cell>
+       <Cell><Data ss:Type="String">menu_order</Data></Cell>
+       <Cell><Data ss:Type="String">post_date</Data></Cell>
+       <Cell><Data ss:Type="String">discount_type</Data></Cell>
+       <Cell><Data ss:Type="String">coupon_amount</Data></Cell>
+       <Cell><Data ss:Type="String">free_shipping</Data></Cell>
+       <Cell><Data ss:Type="String">expiry_date</Data></Cell>
+       <Cell><Data ss:Type="String">minimum_amount</Data></Cell>
+       <Cell><Data ss:Type="String">maximum_amount</Data></Cell>
+       <Cell><Data ss:Type="String">individual_use</Data></Cell>
+       <Cell><Data ss:Type="String">exclude_sale_items</Data></Cell>
+       <Cell><Data ss:Type="String">product_ids</Data></Cell>
+       <Cell><Data ss:Type="String">exclude_product_ids</Data></Cell>
+       <Cell><Data ss:Type="String">product_categories</Data></Cell>
+       <Cell><Data ss:Type="String">exclude_product_categories</Data></Cell>
+       <Cell><Data ss:Type="String">customer_email</Data></Cell>
+       <Cell><Data ss:Type="String">usage_limit</Data></Cell>
+       <Cell><Data ss:Type="String">usage_limit_per_user</Data></Cell>
+       <Cell><Data ss:Type="String">limit_usage_to_x_items</Data></Cell>
+       <Cell><Data ss:Type="String">sc_coupon_validity</Data></Cell>
+       <Cell><Data ss:Type="String">validity_suffix</Data></Cell>
+       <Cell><Data ss:Type="String">auto_generate_coupon</Data></Cell>
+       <Cell><Data ss:Type="String">coupon_title_prefix</Data></Cell>
+       <Cell><Data ss:Type="String">coupon_title_suffix</Data></Cell>
+       <Cell><Data ss:Type="String">is_pick_price_of_product</Data></Cell>
+       <Cell><Data ss:Type="String">sc_disable_email_restriction</Data></Cell>
+       <Cell><Data ss:Type="String">sc_is_visible_storewide</Data></Cell>
       </Row>
-    <% Record.all.each do |r| %>
+      <% Record.all.each do |r| %>
       <Row>
-        <Cell><Data ss:Type="Number"><%= r.id %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= r.email %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= r.coupon_code %></Data></Cell>
+       <Cell><Data ss:Type="String"><%= r.coupon_code %></Data></Cell>
+       <Cell ss:Index="3"><Data ss:Type="String">publish</Data></Cell>
+       <Cell ss:Index="7"><Data ss:Type="String">Store Credit / Gift Certificate</Data></Cell>
+       <Cell><Data ss:Type="Number">100</Data></Cell>
+       <Cell><Data ss:Type="String">no</Data></Cell>
+       <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2016-06-30T00:00:00.000</Data></Cell>
+       <Cell ss:Index="13"><Data ss:Type="String">yes</Data></Cell>
+       <Cell><Data ss:Type="String">no</Data></Cell>
+       <Cell ss:Index="19"><Data ss:Type="String"><%= r.email %></Data></Cell>
+       <Cell><Data ss:Type="Number">1</Data></Cell>
+       <Cell><Data ss:Type="Number">1</Data></Cell>
+       <Cell ss:Index="23"><Data ss:Type="Number">30</Data></Cell>
+       <Cell><Data ss:Type="String">days</Data></Cell>
+       <Cell ss:Index="26"><Data ss:Type="String">EPS</Data></Cell>
+       <Cell><Data ss:Type="String">GWD</Data></Cell>
+       <Cell><Data ss:Type="String">no</Data></Cell>
+       <Cell><Data ss:Type="String">no</Data></Cell>
+       <Cell><Data ss:Type="String">no</Data></Cell>
       </Row>
     <% end %>
     </Table>
