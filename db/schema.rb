@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160602100118) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "records", force: :cascade do |t|
+    t.string   "name"
     t.string   "email"
     t.string   "coupon_code"
     t.datetime "created_at",  null: false

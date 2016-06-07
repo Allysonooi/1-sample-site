@@ -5,6 +5,7 @@ class StaticController < ApplicationController
   def ajax_submit_email
     if email_unique?(params[:email])
       r = Record.new(email: params[:email])
+      r.name = params[:name]
       r.coupon_code = "eps57554e2" + SecureRandom.hex(3) + "gwd"
       r.save
       @success = "Successfully saved!" # TODO: change string
