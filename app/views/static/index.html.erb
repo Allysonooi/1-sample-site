@@ -127,13 +127,13 @@
 
   $(document).ready(function() {
     $(".row-eq-height").each(function() {
-        var heights = $(this).find(".col-eq-height").map(function() {
-            return $(this).outerHeight();
-        }).get(), maxHeight = Math.max.apply(null, heights);
+      var heights = $(this).find(".col-eq-height").map(function() {
+        return $(this).outerHeight();
+      }).get(), maxHeight = Math.max.apply(null, heights);
 
-        $(this).find(".col-eq-height").outerHeight(maxHeight);
+      $(this).find(".col-eq-height").outerHeight(maxHeight);
     });
-});
+  });
 
   $(document).on('click', '#submit_btn', function() {
 
@@ -154,10 +154,13 @@
         },
         dataType: "script"
       })
-      .done(function() {
-        jQuery('#eps1').hide();
-        jQuery('#eps2').show();
-      });
+
+      // .done(function() {
+      //   jQuery('#eps1').hide();
+      //   jQuery('#eps2').show();
+      // });
+
+
     }
   });
 </script>

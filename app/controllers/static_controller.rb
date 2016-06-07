@@ -1,8 +1,34 @@
 class StaticController < ApplicationController
   layout "index"
-  
+  require 'securerandom'
+
   def ajax_submit_email
-    r = Record.new(email: params[:email])
-    r.save
+    if email_unique?(params[:email])
+      r = Record.new(email: params[:email])
+      r.coupon_code = "eps57554e2" + SecureRandom.hex(3) + "gwd"
+      r.save
+      @success = "Successfully saved!" # TODO: change string
+    else
+      @error = "Sorry, the email is already used!" # TODO: change string
+    end
+
+    # rails way
+    # r = Record.new
+    # r.email = params[:email]
+    # r.coupon_code = "eps57554e2" + SecureRandom.hex(3) + "gwd"
+    # if r.save # checks if email is unique
+    #   @success
+    # else
+    #   @error = "Email already used" # chagne string
+    # end
   end
+
+  private
+    def email_unique?(email_param)
+      Record.where(email: email_param).empty?
+    end
+
+    def coupon_code_unique?(coupon_code_param)
+      Record.where(coupon_code: coupon_code_param).empty?
+    end
 end

@@ -1,0 +1,7 @@
+<% if @success %>
+  alert('<%= @success %>');
+  jQuery('#eps1').hide();
+  jQuery('#eps2').show();
+<% elsif @error %>
+  alert('<%= @error %>');
+<% end %>

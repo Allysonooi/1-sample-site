@@ -1,6 +1,11 @@
 <%= render 'adm_datatables_resource' %>
 
 <div class="container">
+
+  <p>Download
+  <%= link_to "Excel", admin_home_path(format: "xls") %>
+  </p>
+
   <div class="table-responsive">
     <table id="rctb"class="table table-bordered">
       <thead>
