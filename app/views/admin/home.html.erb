@@ -7,12 +7,19 @@
     <%= link_to "Excel", admin_home_path(format: "xls") %>
   </p>
 
+  <div>
+      Min date <input id="min" class="dp"/>
+  </div>
+  <div>
+      Max date <input id="max" class="dp"/>
+  </div>
+
   <div class="table-responsive">
     <table id="rctb"class="table table-bordered">
       <thead>
         <tr>
           <th>
-            Id
+            Entry Date
           </th>
           <th>
             Name
@@ -29,7 +36,7 @@
         <% Record.all.each do |r| %>
           <tr>
             <td>
-              <%= r.id %>
+              <%= r.created_at.strftime("%F") %>
             </td>
             <td>
               <%= r.name %>
@@ -49,6 +56,30 @@
 
 <script>
   $(document).ready(function(){
-      $('#rctb').DataTable();
+    var table = $('#rctb').DataTable({
+      "order": [[ 0, "desc" ]],
+    });
+    $( ".dp" ).datepicker({
+      format: "yyyy-mm-dd",
+      autoclose: true,
+    }).on('changeDate', function (ev) {
+      table.draw();
+    });
   });
+
+  $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var min = $('#min').val();
+        var max = $('#max').val();
+        var col_date = data[0]; // use data for the created_at column
+        if ( ( !min && !max ) ||
+             ( !min && col_date <= max ) ||
+             ( min <= col_date && !max ) ||
+             ( min <= col_date && col_date <= max ) )
+        {
+            return true;
+        }
+        return false;
+    }
+  );
 </script>
