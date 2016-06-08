@@ -6,7 +6,6 @@ class StaticController < ApplicationController
     if email_unique?(params[:email])
       r = Record.new(email: params[:email])
       r.name = params[:name]
-      r.coupon_code = "eps57554e2" + SecureRandom.hex(3) + "gwd"
       r.save
       @success = "Successfully saved!" # TODO: change string
     else
@@ -27,9 +26,5 @@ class StaticController < ApplicationController
   private
     def email_unique?(email_param)
       Record.where(email: email_param).empty?
-    end
-
-    def coupon_code_unique?(coupon_code_param)
-      Record.where(coupon_code: coupon_code_param).empty?
     end
 end
