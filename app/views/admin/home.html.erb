@@ -1,56 +1,57 @@
 <%= render 'adm_datatables_resource' %>
+<div style="background-color:#fff">
+  <div class="container">
 
-<div class="container">
+    <p>Download
+      <%= link_to "CSV", admin_home_path(format: "csv") %> |
+      <%= link_to "Excel", admin_home_path(format: "xls") %>
+    </p>
 
-  <p>Download
-    <%= link_to "CSV", admin_home_path(format: "csv") %> |
-    <%= link_to "Excel", admin_home_path(format: "xls") %>
-  </p>
+    <div>
+        Min date <input id="min" class="dp"/>
+    </div>
+    <div>
+        Max date <input id="max" class="dp"/>
+    </div>
 
-  <div>
-      Min date <input id="min" class="dp"/>
-  </div>
-  <div>
-      Max date <input id="max" class="dp"/>
-  </div>
-
-  <div class="table-responsive">
-    <table id="rctb"class="table table-bordered">
-      <thead>
-        <tr>
-          <th>
-            Entry Date
-          </th>
-          <th>
-            Name
-          </th>
-          <th>
-            Email
-          </th>
-          <th>
-            Coupon code
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% Record.all.each do |r| %>
+    <div class="table-responsive">
+      <table id="rctb"class="table table-bordered">
+        <thead>
           <tr>
-            <td>
-              <%= r.created_at.strftime("%F") %>
-            </td>
-            <td>
-              <%= r.name %>
-            </td>
-            <td>
-              <%= r.email %>
-            </td>
-            <td>
-              <%= r.coupon_code %>
-            </td>
+            <th>
+              Entry Date
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Coupon code
+            </th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% Record.all.each do |r| %>
+            <tr>
+              <td>
+                <%= r.created_at.strftime("%F") %>
+              </td>
+              <td>
+                <%= r.name %>
+              </td>
+              <td>
+                <%= r.email %>
+              </td>
+              <td>
+                <%= r.coupon_code %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
