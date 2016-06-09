@@ -1,0 +1,30 @@
+<script>
+  <% #bootstrap-notify %>
+  <% flash.each do |key, value| %>
+    var type = "info";
+    if ("<%= key %>" == "notice") {
+        type= "info";
+    }
+    else if ("<%= key %>" == "alert") {
+        type= "danger";
+    }
+    if ("<%= key %>" == "info") {
+        type= "info";
+    }
+    else if ("<%= key %>" == "danger") {
+        type= "danger";
+    }
+    else if ("<%= key %>" == "success") {
+        type= "success";
+    }
+
+    <% #https://github.com/mouse0270/bootstrap-notify %>
+    $.notify({
+      // options
+      message: "<%= value %>"
+    },{
+      // settings
+      type: type // ('success', 'info', 'warning', 'danger')
+    });
+  <% end %>
+</script>
