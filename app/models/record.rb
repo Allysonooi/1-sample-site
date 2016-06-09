@@ -16,10 +16,10 @@ class Record < ActiveRecord::Base
         # # puts "record.attributes.values_at(*column_names) = #{record.attributes.values_at(*column_names)}"
         # puts "-----------------------------------------------------------------"
         csv << [record.coupon_code, '', 'publish', '', '',
-                '', 'Store Credit / Gift Certificate', '100', 'no', '30/6/16',
-                '', '', 'yes', 'no', '',
-                '', '', '', record.email, '1',
-                '1', '', '30', 'days', '',
+                '', 'Cart Discount', '100', 'no', '31/10/16',
+                '', '', 'no', 'no', '',
+                '4596|3076|4597', '', '', record.email, '',
+                '1', '', '', 'days', '',
                 'EPS', 'GWD', 'no', 'no', 'no']
       end
     end
