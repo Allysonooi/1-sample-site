@@ -1,15 +1,15 @@
 <%= render 'adm_datatables_resource' %>
-<div class="container-fluid">
+<div class="container">
 
-  <p>Download
-    <%= link_to "CSV", admin_home_path(format: "csv") %> |
-    <%= link_to "Excel", admin_home_path(format: "xls") %>
-  </p>
-
-  <div>
-      Min date <input id="min" class="dp"/>
+  <div style="padding-bottom:5px;">
+    <p>Download
+      <%= link_to "CSV", admin_home_path(format: "csv") %> |
+      <%= link_to "Excel", admin_home_path(format: "xls") %>
+    </p>
   </div>
-  <div>
+
+  <div style="padding-bottom:20px;">
+      Min date <input id="min" class="dp"/> 
       Max date <input id="max" class="dp"/>
   </div>
 
