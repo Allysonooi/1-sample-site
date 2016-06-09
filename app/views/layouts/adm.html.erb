@@ -8,17 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <% if admin_signed_in? %>
-      <!-- Sesudah Login -->
-      <%= "#{current_admin.email}" %> <%= link_to 'Logout', destroy_admin_session_path, :method => :delete %>
-    <% else %>
-      <!-- Sebelum Login -->
-      <ul>
-        <li><%= link_to ' Login', new_admin_session_path %></li>
-      </ul>
-    <% end %>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right hcenter">
+            <% if admin_signed_in? %>
+              <!-- Sesudah Login -->
+              <%= "#{current_admin.email}" %> <%= link_to 'Logout', destroy_admin_session_path, :method => :delete %>
+            <% else %>
+              <!-- Sebelum Login -->
+              <ul>
+                <li><%= link_to ' Login', new_admin_session_path %></li>
+              </ul>
+            <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
+    <div class="container-fluid" style="padding-top:50px;">
     <%= yield %>
+    </div>
 
   </body>
 </html>
